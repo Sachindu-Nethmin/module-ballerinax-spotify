@@ -12,16 +12,10 @@ These changes are done in order to improve the overall usability, and as workaro
 
 1. Remove resource paths,
     */playlists/{playlist_id}/images'(put) - schema for the image/jpeg content type is incorrectly defined
-2.  Remove inline response schemas.
-     - headers - Headers to be sent with the request 
-     - queries - Queries to be sent with the request
-3.  Remove bad responses to increase readability.
-        401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
-          $ref: '#/components/responses/Forbidden'
-        '429':
-          $ref: '#/components/responses/TooManyRequests'
+2.Moving the inline schema to the components section
+    1.Move MarketsResponse
+    2.Move PlaylistResponse
+
 
 ## OpenAPI cli command
 
