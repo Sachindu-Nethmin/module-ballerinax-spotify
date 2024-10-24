@@ -3542,13 +3542,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  markets:
-                    type: array
-                    items:
-                      type: string
-                    example: ['CA', 'BR', 'IT']
+                $ref: '#/components/schemas/MarketsResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '403':
@@ -4174,6 +4168,15 @@ components:
   # Reusable schemas (data models)
   #-------------------------------
   schemas:
+    MarketsResponse:
+      type: object
+      properties:
+        markets:
+          type: array
+          items:
+            type: string
+      example:
+        markets: [ 'CA', 'BR', 'IT' ]
     LinkedTrackObject:
       type: object
       x-spotify-docs-type: LinkedTrackObject
